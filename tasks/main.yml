@@ -1,0 +1,4 @@
+---
+# tasks file for lighthouse
+- include_tasks: nginx.yml
+- include_tasks: lighthouse.yml

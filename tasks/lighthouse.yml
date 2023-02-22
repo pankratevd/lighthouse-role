@@ -1,0 +1,12 @@
+    - name: Lighthouse | copy from git
+      become: true
+      git:
+        repo: "{{ lighthouse_vcs }}"
+        version: master
+        force: true
+        update: true
+        dest: "{{ lighthouse_location_dir }}"
+      tags:
+        - distrib
+        - lighthouse
+      notify: nginx-reload
